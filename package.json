@@ -1,0 +1,28 @@
+{
+  "name": "herokuOpenServer",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "opentok": "^2.9.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huw121/opentok-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/huw121/opentok-server/issues"
+  },
+  "homepage": "https://github.com/huw121/opentok-server#readme",
+  "description": ""
+}

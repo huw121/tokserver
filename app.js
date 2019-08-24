@@ -20,7 +20,7 @@ app.listen(PORT, function () {
   console.log('listening on:', PORT);
 });
 
-// Initialize OpenTok
+// Initialise OpenTok
 const opentok = new OpenTok(apiKey, apiSecret);
 
 const promisifiedOpenTok = () => {

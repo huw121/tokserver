@@ -2,7 +2,7 @@ const express = require('express');
 const OpenTok = require('opentok');
 const app = express();
 const cors = require('cors');
-const {key, secret} = require('./config.js');
+const {key, secret} = process.env.NODE_ENV !== "production" ? require('./config.js') : {key: null, secret: null};
 app.use(cors());
 const apiKey = process.env.API_KEY || key;
 const apiSecret = process.env.API_SECRET || secret;

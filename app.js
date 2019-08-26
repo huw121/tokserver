@@ -31,11 +31,16 @@ const promisifiedOpenTok = () => {
   })
 }
 
-app.get('/', function (req, res) {
+app.get('/session', function (req, res) {
   promisifiedOpenTok()
     .then(sessionId => {
-      const token = opentok.generateToken(sessionId);
-      res.status(200).send({ sessionId, token })
+      res.status(200).send({ sessionId })
     })
-    .catch(err => {throw err})
+    .catch(err => { throw err })
+});
+
+app.get('/token/:sessionId', function (req, res) {
+  const { sessionId } = req.params;
+  const token = opentok.generateToken(sessionId);
+  res.status(200).send({ token })
 });
